@@ -79,8 +79,8 @@ server <- function(input, output, session) {
             $("#DivC").css("width", "85%"); 
             $("#DivB").css("width", "5%"); 
             $("#DivA").css("width", "5%");
-            $("#LabelA").show();
-            $("#ContentA").hide();
+            $("#LabelA, #LabelB").show();
+            $("#ContentA, #ContentB").hide();
             ')
       stateA <<- FALSE
       stateB <<- FALSE
@@ -91,7 +91,8 @@ server <- function(input, output, session) {
             $("#DivB").css("width", "5%"); 
             $("#DivA").css("width", "30%");
             $("#LabelA").hide();
-            $("#ContentA").show();
+            $("#ContentA, #LabelB").show();
+            $("#ContentB").hide();
             ')
       stateA <<- TRUE
     }
@@ -102,8 +103,8 @@ server <- function(input, output, session) {
             $("#DivC").css("width", "85%"); 
             $("#DivA").css("width", "5%");
             $("#DivB").css("width", "5%");
-            $("#LabelB").show();
-            $("#ContentB").hide();
+            $("#LabelB, #LabelA").show();
+            $("#ContentB, #ContentA").hide();
             ')
       stateA <<- FALSE
       stateB <<- FALSE
@@ -114,7 +115,8 @@ server <- function(input, output, session) {
             $("#DivA").css("width", "5%"); 
             $("#DivB").css("width", "30%");
             $("#LabelB").hide();
-            $("#ContentB").show();
+            $("#ContentB, #LabelA").show();
+            $("#ContentA").hide();
             ')
       stateB <<- TRUE
     }
